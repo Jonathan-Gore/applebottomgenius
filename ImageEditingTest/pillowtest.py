@@ -7,8 +7,8 @@ import sys
 def combineImages(background, foreground, fScale="1"):
 
     fScale=float(fScale)
-    background = Image.open(background)
-    foreground = Image.open(foreground)
+    background = Image.open('images/' + background)
+    foreground = Image.open('images/' + foreground)
 
     bg_w, bg_h = background.size
 
