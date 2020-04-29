@@ -1,36 +1,41 @@
 from PIL import Image
 
-#defines var as Image.open() object
+##defines var as Image.open() object
 apple = Image.open("C:/git/applebottomgenius/images/apple.jpg")
-smile = Image.open("C:/git/applebottomgenius/images/smile.png")
 orange = Image.open("C:/git/applebottomgenius/images/orange.jpg")
-#
-# ##show images
-# #apple.show()
-# #smile.show()
-#
-# apple_cursed = apple.quantize(colors=2, method=None, kmeans=1, palette=None)
-#
-# apple_cursed.show()
-#
-# #print(apple_size)
-#
-#
-# print(end)
+smile = Image.open("C:/git/applebottomgenius/images/smile.jpg")
 
-#blackboy = Image.new('RGB', (1920,1080), color=0)
+##merges two images into a horizontal concatenation
+def concatenateWide(image1, image2):
+    dst = Image.new('RGB', (image1.width + image2.width, image1.height))
+    dst.paste(image1, (0, 0))
+    dst.paste(image2, (image1.width, 0))
+    return dst
 
-#blackboy.show()
+##merges two images into a vertical concatenation
+def concatenateTall(image1, image2):
+    dst = Image.new('RGB', (image1.width, image1.height + image2.height))
+    dst.paste(image1, (0, 0))
+    dst.paste(image2, (0, image1.height))
+    return dst
 
-orange_w, orange_h = orange.size
+##example of the .save function
+#concatenateTall(apple, orange).save('concatenateTall.jpg')
 
-orange_basewidth = orange_w
+##function that resizes the image1 parameter to image2 and then blends the two together
+##Blendfactor operates on a scale from 0-1, 0 = 100% image1 and 1 = 100% image2
+def imageBlend(image1, image2, BlendFactor):
 
-wpercent = (orange_basewidth/float(apple.size[0]))
+    bFactor = BlendFactor
+    image1_resize = image1.resize(image2.size)
 
+    print("Resized apple.jpg to fit orange.jpg: ", image1_resize.size)
 
+    compare_images = concatenateTall(image1_resize, image2)
+    compare_images.show()
 
+    GodGasped = Image.blend(image1_resize, image2, bFactor)
 
-GodGasped = Image.blend(apple, orange, 0.5)
+    GodGasped.show()
 
-GodGasped.show()
+imageBlend(apple, smile, 0.2)
