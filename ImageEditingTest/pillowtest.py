@@ -7,8 +7,10 @@ import sys
 def combineImages(background, foreground, fScale="1"):
 
     fScale=float(fScale)
-    background = Image.open('images/' + background)
-    foreground = Image.open('images/' + foreground)
+
+    imageFolder = 'images/'
+    background = Image.open(imageFolder + background)
+    foreground = Image.open(imageFolder + foreground)
 
     bg_w, bg_h = background.size
 
@@ -26,9 +28,9 @@ def combineImages(background, foreground, fScale="1"):
     background.show()
 
 
-#apple = Image.open('apple.jpg')
-#smile = Image.open('face.png')
-#combineImages(apple,smile)
+#background = Image.open('apple.jpg')
+#foreground = Image.open('face.png')
+#combineImages(background, foreground, fScale="1")
 
 if sys.argv[1] == 'combineImages':
     #attempting option arguments, there must be a better way
