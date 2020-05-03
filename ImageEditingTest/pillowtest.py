@@ -3,12 +3,14 @@ from PIL import Image
 import sys
 
 #inputs: background, foreground, foreground scale (between >0 and 1)
-#python pillowtest.py combineImages honeycrisp.jpg scary.png .5
+#$python pillowtest.py combineImages honeycrisp.jpg scary.png .5
 def combineImages(background, foreground, fScale="1"):
 
     fScale=float(fScale)
-    background = Image.open(background)
-    foreground = Image.open(foreground)
+
+    imageFolder = 'images/'
+    background = Image.open(imageFolder + background)
+    foreground = Image.open(imageFolder + foreground)
 
     bg_w, bg_h = background.size
 
@@ -26,12 +28,12 @@ def combineImages(background, foreground, fScale="1"):
     background.show()
 
 
-#apple = Image.open('apple.jpg')
-#smile = Image.open('face.png')
-
-#combineImages(apple,smile)
+#background = Image.open('apple.jpg')
+#foreground = Image.open('face.png')
+#combineImages(background, foreground, fScale="1")
 
 if sys.argv[1] == 'combineImages':
+    #attempting option arguments, there must be a better way
     if len(sys.argv) > 4:
         combineImages(sys.argv[2], sys.argv[3], sys.argv[4])
     else:
