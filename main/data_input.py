@@ -24,4 +24,4 @@ def cleanImage(dirty_image):
 
 cleanImage(im1)
 
-
+#probably merge this with 'pillowtest.py' in future.
