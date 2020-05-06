@@ -7,18 +7,31 @@ from skimage.metrics import structural_similarity as ssim
 from skimage.color import rgb2gray
 from skimage.io import imread
 
+"""
+taking 2 images
+rotate second image X times
+for x images compare to image 1
+select highest score comparison
+return degrees to rotate smile
+
+"""
+
 
 #Grabs the current working directory and moves up once into the parent directory
 #This allows us to write to a temp folder, later will become important, also looks cleaner
 directory = os.path.abspath(os.path.join(os.getcwd(), os.pardir))
 
 #im1 = Image.open(sys.argv[1])
+
+print(directory) # AppleBottomGenius
+
+
 #im1 = Image.open("C:/git/applebottomgenius/temp/rotate_temp/rotate180degrees.jpg")
-im1 = Image.open("C:/git/applebottomgenius/temp/rotate_temp/rotate180degrees.jpg")
-im2 = Image.open("C:/git/applebottomgenius/images/jpg/apple.jpg")
+#im = Image.open(relativePath + "/temp/rotate_temp/rotate180degrees.jpg")
+im1= Image.open(directory + "/images/jpg/Honeycrisp.jpg")
 #im2 = Image.open("C:/git/applebottomgenius/images/jpg/Honeycrisp.jpg")
 
-# print(im1.format)
+
 # print(im1.size)
 # print(im1.mode)
 
@@ -45,58 +58,45 @@ def cleanImage(dirty_image):
 #cleanImage(im1)
 
 
-#needs to updating to conform with William's pillowtest.py (much better/flexible)
-def resizeImages(image1, image2):
-    #print(image1.size)
-    #print(image2.size)
-
-    # makes this variable global/accessible between functions
-    #global image1_resize
-
-    image1_resize = image1.resize(image2.size)
-
-    #print(image1_resize.size)
-    #print(image2.size)
-
-    image1_resize.show()
-
-
-#resizeImages(im1, im2)
-
-
 #rotates an image by 359 degrees in 1 degree intervals, saves to temp folder
 ##current issues: rotateDict currently organizes images assuming scales of decimals, bot literal order
-def rotateImage(image1):
-    #image1.show()
-    #image1.rotate(45).show()
-    #image1.rotate(x).save("C:/git/applebottomgenius/temp/" +degrees[x]+ image.jpg")
+def emptyTemp();
 
-    degreeList = list(range(1, 360))
+def rotateImage(image1, variations):
 
-    i=0
-    while i < len(degreeList):
-        image1.rotate(i, fillcolor = white).save("C:/git/applebottomgenius/temp/rotate_temp/rotate"+str(degreeList[i])+"degrees.jpg")
-        i += 1
+    if (variations < 1 or variations > 360):
+        print("Error: rotateImage(image, integer between 1 and 360)")
 
-    fileList = os.listdir("C:/git/applebottomgenius/temp/rotate_temp/")
+    # split into array on '/', return the value of the last elem
+    fileName = image1.filename.split('/').pop()
 
-    #x=0
-    #while x < len(fileList):
-    #    print(fileList[x])
-    #    x += 1
+    print('image name: ' +  fileName)
+    folderName = fileName.split('.')[0] + "Variations"
+
+    try:
+        os.mkdir(directory + "/temp/rotate_temp/" + folderName)
+    except FileExistsError as e:  ## if failed, report it back to the user ##
+        print ("Error: %s - %s." % (e.filename, e.strerror))
+        pass
+
     global rotateDict
-    rotateDict = {fileList[i]: degreeList[i] for i in range(len(degreeList))}
+    rotateDict = {}
+    for x in range(variations):
+        print(x)
+        intervals = int(360/variations*x)
+        imageName = "/rotate" + str(intervals) + "degrees.jpg"
+        #print("intervals: " + str(intervals))
+        saveLocation = directory + "/temp/rotate_temp/" + folderName + imageName
+        #print("save location ::  " + saveLocation)
+        image1.rotate(intervals, fillcolor = white).save(saveLocation)
+        rotateDict.update({str(intervals): imageName})
 
-    # Printing resultant dictionary
-    print("Resultant dictionary is : " + str(rotateDict))
-    print("rotateImage function completed")
-    #y=0
-    #while y < len(rotateDict):
-    #    print("Resultant dictionary is : " + str(rotateDict[y]))
-    #    y += 1
+    fileList = os.listdir(directory + "/temp/rotate_temp/")
 
-#rotateImage(im1)
+    print("printed " + str(variations) + " variations of " + fileName)
 
+rotateImage(im1, 0)
+print(im1.format)
 #uses SSIM to compare two images of the same size
 def compareImages(image1, image2):
 
@@ -120,7 +120,7 @@ def compareImages(image1, image2):
 
     print(structural_similarity)
 
-compareImages(im1, im2)
+#compareImages(im1, im2)
 
 
 def compareImagesLoop(image1, image2):
