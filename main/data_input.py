@@ -13,7 +13,6 @@ rotate second image X times
 for x images compare to image 1
 select highest score comparison
 return degrees to rotate smile
-
 """
 
 
@@ -60,43 +59,46 @@ def cleanImage(dirty_image):
 
 #rotates an image by 359 degrees in 1 degree intervals, saves to temp folder
 ##current issues: rotateDict currently organizes images assuming scales of decimals, bot literal order
-def emptyTemp();
+#def emptyTemp();
 
+#takes in image, variations to save. Saves image set to temp/rotate_temp
 def rotateImage(image1, variations):
 
+    #i don't know how to handle errors
     if (variations < 1 or variations > 360):
         print("Error: rotateImage(image, integer between 1 and 360)")
+    else:
 
-    # split into array on '/', return the value of the last elem
-    fileName = image1.filename.split('/').pop()
+        # split into array on '/', return the value of the last elem
+        fileName = image1.filename.split('/').pop()
 
-    print('image name: ' +  fileName)
-    folderName = fileName.split('.')[0] + "Variations"
+        print('image name: ' +  fileName)
+        folderName = fileName.split('.')[0] + "Variations"
 
-    try:
-        os.mkdir(directory + "/temp/rotate_temp/" + folderName)
-    except FileExistsError as e:  ## if failed, report it back to the user ##
-        print ("Error: %s - %s." % (e.filename, e.strerror))
-        pass
+        try:
+            os.mkdir(directory + "/temp/rotate_temp/" + folderName)
+        except FileExistsError as e:  ## if failed, report it back to the user ##
+            print ("Error: %s - %s." % (e.filename, e.strerror))
+            pass
 
-    global rotateDict
-    rotateDict = {}
-    for x in range(variations):
-        print(x)
-        intervals = int(360/variations*x)
-        imageName = "/rotate" + str(intervals) + "degrees.jpg"
-        #print("intervals: " + str(intervals))
-        saveLocation = directory + "/temp/rotate_temp/" + folderName + imageName
-        #print("save location ::  " + saveLocation)
-        image1.rotate(intervals, fillcolor = white).save(saveLocation)
-        rotateDict.update({str(intervals): imageName})
+        global rotateDict
+        rotateDict = {}
+        for x in range(variations):
+            intervals = int(360/variations*x)
+            imageName = "/" + fileName.split('.')[0] + str(intervals) + "degrees.jpg"
+            print(imageName)
+            #print("intervals: " + str(intervals))
+            saveLocation = directory + "/temp/rotate_temp/" + folderName + imageName
+            #print("save location ::  " + saveLocation)
+            image1.rotate(intervals, fillcolor = white).save(saveLocation)
+            rotateDict.update({str(intervals): imageName})
 
-    fileList = os.listdir(directory + "/temp/rotate_temp/")
+        fileList = os.listdir(directory + "/temp/rotate_temp/")
 
-    print("printed " + str(variations) + " variations of " + fileName)
+        print("printed " + str(variations) + " variations of " + fileName)
 
-rotateImage(im1, 0)
-print(im1.format)
+rotateImage(im1, 11)
+
 #uses SSIM to compare two images of the same size
 def compareImages(image1, image2):
 
