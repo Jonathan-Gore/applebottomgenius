@@ -21,13 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a4ca3489-ad27-43bb-a153-499538b8327c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/apple.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/apple.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/orange.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/smile.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/smile.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/data_input.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/data_input.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/color.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mask_RCNN/samples/balloon/inspect_balloon_data.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Mask_RCNN/samples/balloon/inspect_balloon_data.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mask_RCNN/samples/coco/inspect_data.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Mask_RCNN/samples/coco/inspect_data.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mask_RCNN/samples/shapes/train_shapes.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Mask_RCNN/samples/shapes/train_shapes.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,6 +139,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state width="2237" height="398" key="GridCell.Tab.0.bottom" timestamp="1588745718132">
