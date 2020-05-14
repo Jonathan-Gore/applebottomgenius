@@ -29,13 +29,13 @@ rcnn.py -- communicator for Matterport Mask_RCNN modified model
 #Grabs the current working directory and moves up once into the parent directory
 #This allows us to write to a temp folder, later will become important, also looks cleaner
 directory = os.path.abspath(os.path.join(os.getcwd(), os.pardir))
-directory1 = "Z:\Datasets\Apples\downloads\Applefruit"
+directory1 = "Z:\Datasets\Apples\downloads\Applefruit\compare"
 
 #global color variables
 white = (255,255,255)
 
-# im1 = Image.open("C:/git/applebottomgenius/temp/rotate_temp/rotate180degrees.jpg")
-# im2 = Image.open("C:/git/applebottomgenius/images/jpg/apple.jpg")
+im1 = Image.open("C:\\git\\applebottomgenius\\images\\jpg\\goodapple1.jpg")
+im2 = Image.open("C:/git/applebottomgenius/images/jpg/goodapple2.jpg")
 
 
 ## merges two images into a horizontal concatenation
@@ -96,9 +96,8 @@ def rotateImage(image1, variations):
     if (variations < 1 or variations > 360):
         print("Error: rotateImage(image, integer between 1 and 360)")
     else:
-
-        # split into array on '/', return the value of the last elem
-        fileName = image1.filename.split('/').pop()
+        # split into array on '\\' (\ is escape), return the value of the last elem
+        fileName = image1.filename.split('\\').pop()
 
         print('image name: ' +  fileName)
         folderName = fileName.split('.')[0] + "Variations"
@@ -109,8 +108,7 @@ def rotateImage(image1, variations):
             print ("Error: %s - %s." % (e.filename, e.strerror))
             pass
 
-        global rotateDict
-        rotateDict = {}
+        variationDict = {}
         for x in range(variations):
             intervals = int(360/variations*x)
             imageName = "/" + fileName.split('.')[0] + str(intervals) + "degrees.jpg"
@@ -119,13 +117,15 @@ def rotateImage(image1, variations):
             saveLocation = directory + "/temp/rotate_temp/" + folderName + imageName
             #print("save location ::  " + saveLocation)
             image1.rotate(intervals, fillcolor = white).save(saveLocation)
-            rotateDict.update({str(intervals): imageName})
+            variationDict.update({str(intervals): saveLocation})
 
         fileList = os.listdir(directory + "/temp/rotate_temp/")
 
         print("printed " + str(variations) + " variations of " + fileName)
 
+    return variationDict
 
+vDict = rotateImage(im1, 30)
 ## uses SSIM to compare two images of the same size
 def compareImages(image1, image2):
 
@@ -178,21 +178,45 @@ def compareALLImages(file_directory):
             filehandle.write('%s\n' % similarimage)
     return similarlist
 
-results = compareALLImages(directory1)
-print(results)
+# results = compareALLImages(directory1)
+# print(results)
 
 ## Under development
-def compareImagesLoop(image1, image2):
+def compareVariations(userinput, variationDict):
+    smiledegrees = 0
+    currentbest = 0
 
-    i=0
-    while i < len(rotateDict):
-        image1a = np.array(image1.resize(image2.size))
-        image2a = np.array(image2)
+    for key in variationDict:
+        print("printing key, then dictionary[key]")
+        print(" ")
+        print(key)
+        print(variationDict[key])
 
-        #ssim can be used with color, but it is a massively more complex process for our needs, so we convert to grayscale
-        rgb2gray(image1a)
-        rgb2gray(image2a)
+        image1 = Image.open(variationDict[key])
+
+        image1a = np.array(image1.resize(userinput.size))
+        image2a = np.array(userinput)
+
         structural_similarity = ssim(image1a, image2a, multichannel=True, data_range=image2a.max() - image2a.min())
+        if structural_similarity > currentbest:
+            currentbest = structural_similarity
+            smiledegrees = [key]
+
         print(structural_similarity)
-        ssimScores = {i,structural_similarity}
+        ssimScores = {key,structural_similarity}
         print(ssimScores)
+
+        # if ssimScores[key] > currentbest:
+        #     currentbest = ssimScores[key]
+
+    print("degrees to rotate smile: " + str(smiledegrees))
+    return smiledegrees
+
+compareVariations(im2, vDict)
+
+
+#def main():
+
+# test_dictionary = {30:"image30", 60:"image60", 90:"image90"}
+#
+# print(test_dictionary[30])
