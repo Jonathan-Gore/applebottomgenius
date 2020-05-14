@@ -19,12 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4ca3489-ad27-43bb-a153-499538b8327c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mask_RCNN/samples/balloon/inspect_balloon_data.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Mask_RCNN/samples/balloon/inspect_balloon_data.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mask_RCNN/samples/coco/inspect_data.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Mask_RCNN/samples/coco/inspect_data.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mask_RCNN/samples/shapes/train_shapes.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Mask_RCNN/samples/shapes/train_shapes.ipynb" afterDir="false" />
-    </list>
+    <list default="true" id="a4ca3489-ad27-43bb-a153-499538b8327c" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

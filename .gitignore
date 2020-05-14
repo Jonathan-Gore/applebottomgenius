@@ -1,1 +1,6 @@
-C:\git\applebottomgenius\Mask_RCNN\images\coco
+################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+# IDE
+*.idea/
