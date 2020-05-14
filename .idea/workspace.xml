@@ -21,37 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a4ca3489-ad27-43bb-a153-499538b8327c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/jpg/apple.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/jpg/apple.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/util.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/util.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/rotate_temp/HoneycrispVariations/Honeycrisp108degrees.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/temp/rotate_temp/HoneycrispVariations/Honeycrisp108degrees.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/rotate_temp/HoneycrispVariations/Honeycrisp130degrees.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/rotate_temp/HoneycrispVariations/Honeycrisp144degrees.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/temp/rotate_temp/HoneycrispVariations/Honeycrisp144degrees.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/rotate_temp/HoneycrispVariations/Honeycrisp163degrees.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/rotate_temp/HoneycrispVariations/Honeycrisp180degrees.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/temp/rotate_temp/HoneycrispVariations/Honeycrisp180degrees.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/rotate_temp/HoneycrispVariations/Honeycrisp196degrees.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/rotate_temp/HoneycrispVariations/Honeycrisp216degrees.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/temp/rotate_temp/HoneycrispVariations/Honeycrisp216degrees.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/rotate_temp/HoneycrispVariations/Honeycrisp229degrees.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/rotate_temp/HoneycrispVariations/Honeycrisp252degrees.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/temp/rotate_temp/HoneycrispVariations/Honeycrisp252degrees.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/rotate_temp/HoneycrispVariations/Honeycrisp261degrees.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/rotate_temp/HoneycrispVariations/Honeycrisp288degrees.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/temp/rotate_temp/HoneycrispVariations/Honeycrisp288degrees.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/rotate_temp/HoneycrispVariations/Honeycrisp294degrees.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/rotate_temp/HoneycrispVariations/Honeycrisp324degrees.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/temp/rotate_temp/HoneycrispVariations/Honeycrisp324degrees.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/rotate_temp/HoneycrispVariations/Honeycrisp327degrees.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/rotate_temp/HoneycrispVariations/Honeycrisp32degrees.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/rotate_temp/HoneycrispVariations/Honeycrisp36degrees.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/temp/rotate_temp/HoneycrispVariations/Honeycrisp36degrees.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/rotate_temp/HoneycrispVariations/Honeycrisp65degrees.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/rotate_temp/HoneycrispVariations/Honeycrisp72degrees.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/temp/rotate_temp/HoneycrispVariations/Honeycrisp72degrees.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/rotate_temp/HoneycrispVariations/Honeycrisp98degrees.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/rotate_temp/HoneycrispVariations/rotate0degrees.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/rotate_temp/HoneycrispVariations/rotate108degrees.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/rotate_temp/HoneycrispVariations/rotate144degrees.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/rotate_temp/HoneycrispVariations/rotate180degrees.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/rotate_temp/HoneycrispVariations/rotate216degrees.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/rotate_temp/HoneycrispVariations/rotate252degrees.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/rotate_temp/HoneycrispVariations/rotate288degrees.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/rotate_temp/HoneycrispVariations/rotate324degrees.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/rotate_temp/HoneycrispVariations/rotate36degrees.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/rotate_temp/HoneycrispVariations/rotate72degrees.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,22 +162,22 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1587" height="607" key="GridCell.Tab.0.bottom" timestamp="1589441340282">
+    <state width="1587" height="603" key="GridCell.Tab.0.bottom" timestamp="1589442571170">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1587" height="607" key="GridCell.Tab.0.bottom/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1589441340282" />
-    <state width="1587" height="607" key="GridCell.Tab.0.center" timestamp="1589441340282">
+    <state width="1587" height="603" key="GridCell.Tab.0.bottom/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1589442571170" />
+    <state width="1587" height="603" key="GridCell.Tab.0.center" timestamp="1589442571170">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1587" height="607" key="GridCell.Tab.0.center/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1589441340282" />
-    <state width="1587" height="607" key="GridCell.Tab.0.left" timestamp="1589441340282">
+    <state width="1587" height="603" key="GridCell.Tab.0.center/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1589442571170" />
+    <state width="1587" height="603" key="GridCell.Tab.0.left" timestamp="1589442571170">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1587" height="607" key="GridCell.Tab.0.left/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1589441340282" />
-    <state width="1587" height="607" key="GridCell.Tab.0.right" timestamp="1589441340282">
+    <state width="1587" height="603" key="GridCell.Tab.0.left/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1589442571170" />
+    <state width="1587" height="603" key="GridCell.Tab.0.right" timestamp="1589442571170">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1587" height="607" key="GridCell.Tab.0.right/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1589441340282" />
+    <state width="1587" height="603" key="GridCell.Tab.0.right/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1589442571170" />
     <state x="775" y="322" key="SettingsEditor" timestamp="1588744391134">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

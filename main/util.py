@@ -1,5 +1,5 @@
 from PIL import Image
-import os
+import os, shutil
 import sys
 import numpy as np
 import itertools
@@ -30,6 +30,7 @@ rcnn.py -- communicator for Matterport Mask_RCNN modified model
 #This allows us to write to a temp folder, later will become important, also looks cleaner
 directory = os.path.abspath(os.path.join(os.getcwd(), os.pardir))
 directory1 = "Z:\Datasets\Apples\downloads\Applefruit\compare"
+tempdirectory = (directory + "/temp/rotate_temp/")
 
 #global color variables
 white = (255,255,255)
@@ -125,7 +126,7 @@ def rotateImage(image1, variations):
 
     return variationDict
 
-vDict = rotateImage(im1, 30)
+#vDict = rotateImage(im1, 30)
 ## uses SSIM to compare two images of the same size
 def compareImages(image1, image2):
 
@@ -212,8 +213,23 @@ def compareVariations(userinput, variationDict):
     print("degrees to rotate smile: " + str(smiledegrees))
     return smiledegrees
 
-compareVariations(im2, vDict)
+#compareVariations(im2, vDict)
 
+## unsure, maybe Tempfile python module for images
+def tempClean(folder_path):
+
+    for filename in os.path.join(folder_path):
+        file_path = os.path.join(folder_path, filename)
+        try:
+            if os.path.isfile(file_path) or os.path.islink(file_path):
+                os.unlink(file_path)
+            elif os.path.isdir(file_path):
+                shutil.rmtree(file_path)
+        except Exception as e:
+            print('Failed to delete %s. ReasonL %s' % (file_path, e))
+
+
+tempClean(tempdirectory)
 
 #def main():
 
