@@ -4,3 +4,6 @@
 
 # IDE
 *.idea/
+
+#Temp files
+temp/
