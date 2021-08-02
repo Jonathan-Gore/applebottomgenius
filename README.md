@@ -11,5 +11,3 @@ A high-tech solution to a problem no one is facing.
 3. Mask polygon is fed through proprietory AppleGeometry algorithm to determine which way is up (#deepthoughts) -> returns <sup>o</sup> in angles to rotate smiley faces to align properly with apples.
 
 4. Smiley faces are then scaled to original image proportions and then applied to original image user uploaded -> return picture with smiling, happy, and healthy apples.
-
-##We are only excepting early buyout offerings starting in the double digits.
